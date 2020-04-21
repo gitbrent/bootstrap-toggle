@@ -50,7 +50,7 @@
 .toggle.off .toggle-group {
 	left: -100%;
 }
-.toggle-on {
+.input-group-btn .toggle-on, .toggle-on {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -60,7 +60,7 @@
 	border: 0;
 	border-radius: 0;
 }
-.toggle-off {
+.input-group-btn .toggle-off, .toggle-off {
 	position: absolute;
 	top: 0;
 	bottom: 0;
