@@ -160,7 +160,7 @@ cases where you want to update the controls on/off state, but do not want to fir
 <button class="btn btn-success" onclick="toggleApiOnSilent()" >On by API (silent)</button>
 <button class="btn btn-success" onclick="toggleApiOffSilent()">Off by API (silent)</button>
 <button class="btn btn-warning" onclick="toggleApiOnNotSilent()">On by API (not silent)</button>
-<button class="btn btn-warning" onclick="toggleApiOffNotSilent()">On by API (not silent)</button>
+<button class="btn btn-warning" onclick="toggleApiOffNotSilent()">Off by API (not silent)</button>
 <script>
   function toggleApiOnSilent() {
     $('#toggle-silent').bootstrapToggle('on', true);
