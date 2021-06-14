@@ -60,7 +60,7 @@
 			.addClass(this._offstyle + ' ' + size)
 		var $toggleHandle = $('<span class="toggle-handle btn btn-light">')
 			.addClass(size)
-		var $toggleGroup = $('<div class="toggle-group">')
+		var $toggleGroup = $('<div class="toggle-group" tabindex="0">')
 			.append($toggleOn, $toggleOff, $toggleHandle)
 		var $toggle = $('<div class="toggle btn" data-toggle="toggle" role="button">')
 			.addClass( this.$element.prop('checked') ? this._onstyle : this._offstyle+' off' )
@@ -183,5 +183,17 @@
 		var $checkbox = $(this).find('input[type=checkbox]')
 		$checkbox.bootstrapToggle('toggle')
 		e.preventDefault()
-	})
+	});
+
+	$(document).on('keypress', 'div[data-toggle^=toggle]', function handleKeyPress(event) {
+		console.log('keypress triggered');
+		let isEnterOrSpace = event.keyCode === 32 || event.keyCode === 13;
+		if (isEnterOrSpace) {
+			// Don't scroll the page if space is pressed
+			var $checkbox = $(this).find('input[type=checkbox]')
+			$checkbox.bootstrapToggle('toggle')
+			event.preventDefault()
+		}
+	});
+
 }(jQuery);
